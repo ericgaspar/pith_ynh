@@ -98,13 +98,13 @@ ynh_add_nginx_config
 #=================================================
 # INSTALL THE LOUNGE
 #=================================================
-ynh_script_progression --message="Installing $app..." --weight=10
+# ynh_script_progression --message="Installing $app..." --weight=10
 
-pushd $final_path
- 	ynh_use_nodejs
-	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install
-	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run-script build
-popd
+# pushd $final_path
+#  	ynh_use_nodejs
+# 	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install
+# 	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run-script build
+# popd
 
 #=================================================
 # SETUP SYSTEMD
