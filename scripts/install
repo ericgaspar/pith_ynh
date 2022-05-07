@@ -103,8 +103,10 @@ ynh_script_progression --message="Installing $app..." --weight=10
 pushd $final_path
  	ynh_use_nodejs
  	rm package-lock.json
-	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install
-	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run-script build
+	#ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install
+	#ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run-script build
+	npm install
+	npm run-script build
 popd
 
 #=================================================
