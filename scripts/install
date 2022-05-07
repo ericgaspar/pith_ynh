@@ -102,9 +102,8 @@ ynh_script_progression --message="Installing $app..." --weight=10
 
 pushd $final_path
  	ynh_use_nodejs
- 	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install -g @pithmediaserver/pith
-	#npm install
-	#npm run-script build
+	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install
+	ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run-script build
 popd
 
 #=================================================
@@ -128,7 +127,7 @@ yunohost service add $app --description="A short description of the app" --log="
 ynh_script_progression --message="Starting a systemd service..." --time --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action="start" --log_path="systemd"
 
 #=================================================
 # SETUP SSOWAT
