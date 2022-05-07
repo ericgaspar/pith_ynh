@@ -2,6 +2,6 @@ SOURCE_URL=https://github.com/Evinyatar/pith/archive/refs/tags/v0.1.0.tar.gz
 SOURCE_SUM=f1a8eb88347aea99a17f89f0ff28c6f84e95953b1e3badd95eedc5dcb08743e1
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
+SOURCE_IN_SUBDIR=false
 SOURCE_FILENAME=
 SOURCE_EXTRACT=true
